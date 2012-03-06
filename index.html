@@ -41,7 +41,7 @@
           startNumber : 111,
         }
         );
-      $('#sample-1').everyTime(5000,'autoIncrement',function(){
+      $("#sample-1").everyTime(5000,'autoIncrement',function(){
         $("#sample-number").tallyCounter('inc',1);
       });
     });
@@ -60,11 +60,18 @@
         <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="https://github.com/kihn/tally_counter">tally_counter</a>
-      <span class="small">by <a href="https://github.com/kihn">kihn</a></span></h1>
+    <h1><a href="https://github.com/kihn/tally_counter">tally_counter</a></h1>
 
     <div class="description">
-      jquery plugin
+      <p>カウンター表示jquery plugin</p>
+      できること
+      <ul>
+        <li>上方向への回転、下方向への回転が設定可能</li>
+        <li>数値の増減が任意の間隔で可能</li>
+        <li>サーバと同期して値を制御することが可能</li>
+        <li>ランダム回転</li>
+      </ul>
+      
     </div>
 
     
@@ -77,12 +84,14 @@
 
     
       <h2>Authors</h2>
-      <p>ynomura (vonsalza@gmail.com)<br/>      </p>
+      <p>ynomura (vonsalza@gmail.com)
+<br/>      </p>
     
 
     
       <h2>Contact</h2>
-      <p>ynomura (vonsalza@gmail.com)<br/>      </p>
+      <p>ynomura (vonsalza@gmail.com)
+<br/>      </p>
     
 
     <h2>Download</h2>
@@ -96,9 +105,22 @@
       <pre>$ git clone git://github.com/kihn/tally_counter</pre>
     </p>
     <h2>Demo</h2>
-    <p id="sample-1">5秒ごとにカウントアップするサンプル</p>
+    <p id="sample-1">5秒ごとに数取器のようにカウントアップするサンプル</p>
     <div id="sample-number"></div>
-
+    <pre>
+	        $(function(){
+	          $("#sample-number").tallyCounter(
+	            {
+	              numbersImage: "./img/number_up.png",
+	              widthNumber: 60,
+	              heightNumber: 60,
+	              startNumber : 111,
+	            });
+	          $('#sample-1').everyTime(5000,'autoIncrement',function(){
+	            $("#sample-number").tallyCounter('inc',1);
+	          });
+	        });
+    </pre>
     <div class="footer">
       get the source code on GitHub : <a href="https://github.com/kihn/tally_counter">kihn/tally_counter</a>
     </div>
